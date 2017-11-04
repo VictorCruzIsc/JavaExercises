@@ -1,6 +1,6 @@
 package com.src.application;
 
-import com.src.services.EmailService;
+import com.src.service.EmailService;
 
 public class Application {
     /**
@@ -17,6 +17,9 @@ public class Application {
      * 
      * Testing the application will be very difficult since our application is directly creating the email
      * service instance. There is no way we can mock these objects in our test classes.
+     *
+     * To solve previous problems we could ask in this class to receive the EmailService as a constructor
+     * parameter, leading the user to build the EmailService, which is not a good design practice.
      */
     private EmailService mEmailService = new EmailService();
 
